@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#SHIFT838 tms9900-gcc Installation Script Version 1.0
+#This version uses current gcc Installation script and older libti99 from Tursi
+
 set -e
 
 # Trap any error and print a clean message
