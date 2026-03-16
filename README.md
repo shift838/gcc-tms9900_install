@@ -53,16 +53,24 @@ or simply just open a new terminal
 cd ~/ti994a-32kmemtest
 make
 
-#Repository contents:
+# Repository contents:
+
 tms9900-gcc_install.sh     # Automated installer script
+
 gcc-installer.tar.gz       # GCC TMS9900 installer package
+
 gcc10-patch.zip            # GCC10 compatibility patch
+
 elf2ea5.tar.gz             # elf2ea5 utility source
+
 ea5split3.zip              # ea5split utility source
+
 elf2cart.tar.gz            # elf2cart utility source
+
 README.md                  # Documentation
 
 This installer is intended for Linux and WSL (Ubuntu recommended).
-• 	All required toolchain components are hosted in this repository for stable, script‑friendly access.
-• 	The installer uses strict error handling to ensure reliability and clear failure reporting.
+
+• All required toolchain components are hosted in this repository for stable, script‑friendly access.  
+• The installer uses strict error handling to ensure reliability and clear failure reporting.
 
