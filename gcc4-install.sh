@@ -156,7 +156,7 @@ echo
 echo "Cloning libti99 and 32kmemtest..."
 cd ~
 git clone https://github.com/tursilion/libti99.git || true
-git clone https://github.com/jedimatt42/ti994a-32kmemtest.git || true
+git clone https://github.com/shift838/838-ti994a-memtest || true
 echo "Clone complete."
 echo
 
@@ -185,4 +185,3 @@ echo
 
 echo "Verifying TMS9900 GCC installation..."
 $PREFIX/bin/tms9900-unknown-elf-gcc -v
-
