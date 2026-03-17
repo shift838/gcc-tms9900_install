@@ -47,8 +47,8 @@ The script includes error‑handling logic to stop on failure and only prints a 
 # POST Installation
 
 1. To activate the updated enviornment variables:
-source ~/.bashrc
-or simply just open a new terminal
+
+	- Execute command: source ~/.bashrc or simply just open a new terminal
 
 # To build the 32k memory tester project:
 1. Edit Makefile to ensure LIBTI99 points to your ~/libti99 directory.
