@@ -13,13 +13,13 @@ You can install the entire TMS9900 GCC toolchain by downloading the installer sc
 ***There will be 100's of warnings, don't panic, just ignore them.
 
 ### 1. Download the installer script
-wget https://raw.githubusercontent.com/shift838/gcc-tms9900_install/main/gcc4-install.sh
+wget https://raw.githubusercontent.com/shift838/gcc-tms9900_install/main/gcc4-4-install.sh
 
 ### 2. Grant execute permissions to the script
-chmod +x gcc4-install.sh
+chmod +x gcc4-4-install.sh
 
 ### 3. Run the installer
-./gcc4-install.sh
+./gcc4-4-install.sh
 
 # What the Installer Sets Up:
 The  script performs a complete toolchain setup:
@@ -81,15 +81,14 @@ EA5_SPLIT_DIR?=echo Dont need:
 # To build the 838-memory tester project:
 1. Edit Makefile to ensure LIBTI99 points to your ~/LibTi99All directory.
 2. Perform the below commands:
-cd ~/838-ti994a-memtest
-make
+	- cd ~/838-ti994a-memtest
+	- make
 
 # Repository contents:
-tms9900-gcc_install.sh     # Automated installer script  
-gcc-installer.tar.gz       # GCC TMS9900 installer package  
-gcc10-patch.zip            # GCC10 compatibility patch  
-elf2ea5.tar.gz             # elf2ea5 utility source  
-ea5split3.zip              # ea5split utility source  
-elf2cart.tar.gz            # elf2cart utility source  
-README.md                  # Documentation  
+gcc4-4-install.sh	       		# Automated installer script   
+gcc-4.4.0-tms9900-1.32.patch	# GCC 1.32 compatibility patch  
+elf2ea5.tar.gz             		# elf2ea5 utility source  
+ea5split3.zip              		# ea5split utility source  
+elf2cart.tar.gz            		# elf2cart utility source  
+README.md                  		# Documentation  
 
