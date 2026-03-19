@@ -52,11 +52,6 @@ The script includes error‑handling logic to stop on failure and only prints a 
 
 # POST Installation
 
-The new elf2ea5 in the Phoenix Wright code does not need split anymore but if you need it, then go ahead and use this
-
-#EA5_SPLIT_DIR?=~/tms9900gcc/bin
-
-EA5_SPLIT_DIR?=echo Dont need:
 1. To activate the updated enviornment variables with the following command or simply just open a new terminal.
 	- source ~/.bashrc 
 
