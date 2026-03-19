@@ -150,9 +150,9 @@ cp elf2cart "$PREFIX/bin/"
 echo "elf2cart installed."
 echo
 
-# ---------------------------------------------------------
-# 8. Download libraries (libTi99All + 838-ti994a-memtest)
-# ---------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# 8. Download libraries and 838 Memory Tester Project (libTi99All + 838-ti994a-memtest)
+# -------------------------------------------------------------------------------------
 echo "Downloading libTi99All and 838-ti994a-memtest..."
 cd ~
 
@@ -168,7 +168,7 @@ unzip -o memtest.zip
 rm -f memtest.zip
 mv 838-ti994a-memtest-main 838-ti994a-memtest 2>/dev/null || true
 
-echo "Libraries downloaded and extracted."
+echo "Libraries and 838-ti994a-memtest downloaded and extracted."
 echo
 
 # ---------------------------------------------------------
@@ -200,3 +200,32 @@ echo
 
 echo "Verifying TMS9900 GCC installation..."
 $PREFIX/bin/tms9900-unknown-elf-gcc -v
+echo 
+echo "Before bulding the test project, you will need to build the libTi99All library."
+echo "Perform the below..."
+echo
+echo "cd ~/libTi99All"
+echo "nano ./Makefile.ti99"
+echo "Update the Paths to:"
+echo
+echo "TMS9900_DIR?=$(HOME)/tms9900gcc/bin"
+echo "ELF2EA5_DIR?=$(HOME)/tms9900gcc/bin"
+echo
+echo "Update path to executables:"
+echo
+echo "GAS=$(TMS9900_DIR)/tms9900-unknown-elf-as"
+echo "LD=$(TMS9900_DIR)/tms9900-unknown-elf-ld"
+echo "CC=$(TMS9900_DIR)/tms9900-unknown-elf-gcc"
+echo "AR=$(TMS9900_DIR)/tms9900-unknown-elf-ar"
+echo "Save your changes!"
+echo
+echo "Issue the commands below to compile and copy the required file."
+echo "make clean"
+echo "rm -rf buildti"
+echo "make ti"
+echo "cp /buildti/libti99.a ."
+echo
+echo "You will be ready to compile the 838-ti994a-memteset project."
+echo
+echo "Happy coding!!!"
+
