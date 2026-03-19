@@ -156,8 +156,8 @@ echo
 echo "Downloading libTi99All and 838-ti994a-memtest..."
 cd ~
 
-# --- libTi99All (branch: main) ---
-wget https://github.com/libTi99All/libTi99All/archive/refs/heads/main.zip -O libTi99All.zip
+# --- libTi99All (tursilion fork, branch: main) ---
+wget https://github.com/tursilion/libTi99All/archive/refs/heads/main.zip -O libTi99All.zip
 unzip -o libTi99All.zip
 rm -f libTi99All.zip
 mv libTi99All-main libTi99All 2>/dev/null || true
