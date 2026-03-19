@@ -48,45 +48,12 @@ The script includes error‑handling logic to stop on failure and only prints a 
 
 # POST Installation
 
-1. Update Makefile.ti99 for libTi99All and save with updates below
-
-    ```
-    cd ~/libTi99All
-    nano ./Makefile.ti99
-    ```
-
-    Update Paths to:
-
-    ```
-    TMS9900_DIR?=$(HOME)/tms9900gcc/bin
-    ELF2EA5_DIR?=$(HOME)/tms9900gcc/bin
-    ```
-
-    Update path to executables:
-
-    ```
-    GAS=$(TMS9900_DIR)/tms9900-unknown-elf-as
-    LD=$(TMS9900_DIR)/tms9900-unknown-elf-ld
-    CC=$(TMS9900_DIR)/tms9900-unknown-elf-gcc
-    AR=$(TMS9900_DIR)/tms9900-unknown-elf-ar
-    ```
-
-2. Compile libTi99All and copy libti99.a to ~/libTi99All folder.
-
-    ```
-    make clean
-    rm -rf buildti
-    make ti
-    cp buildti/libti99.a .
-    ```
-
 # The new elf2ea5 in the Phoenix Wright code does not need split anymore
 # but if you need it, then go ahead and use this
 #EA5_SPLIT_DIR?=~/tms9900gcc/bin
 EA5_SPLIT_DIR?=echo Dont need:
-2. To activate the updated enviornment variables:
-
-	- Execute command: source ~/.bashrc or simply just open a new terminal
+1. To activate the updated enviornment variables with the following command or simply just open a new terminal.
+	- source ~/.bashrc 
 
 # To build the 838-memory tester project:
 1. Edit Makefile to ensure LIBTI99 points to your ~/LibTi99All directory.
