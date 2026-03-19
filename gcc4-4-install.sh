@@ -189,12 +189,6 @@ fi
 echo "Environment variables added."
 echo
 
-echo "Reloading environment..."
-# Note: source only works in the current script context; 
-# User must still run 'source ~/.bashrc' manually after script ends.
-source ~/.bashrc || true
-echo
-
 echo "✔ TMS9900 GCC 4.4.0 toolchain installation completed successfully."
 echo
 
@@ -226,6 +220,9 @@ echo "make ti"
 echo "cp /buildti/libti99.a ."
 echo
 echo "You will be ready to compile the 838-ti994a-memteset project."
+echo
+echo "Reload the envionrment variables.."
+echo "Issue command: source ~/.bashrc"
 echo
 echo "Happy coding!!!"
 
