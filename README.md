@@ -10,6 +10,8 @@ You may **download and run the installer script directly** without cloning this 
 
 You can install the entire TMS9900 GCC toolchain by downloading the installer script and running it.
 
+***There will be 100's of warnings, don't panic, just ignore them.
+
 ### 1. Download the installer script
 wget https://raw.githubusercontent.com/shift838/gcc-tms9900_install/main/gcc4-install.sh
 
