@@ -151,13 +151,24 @@ echo "elf2cart installed."
 echo
 
 # ---------------------------------------------------------
-# 8. Clone libraries (libTi99All)
+# 8. Download libraries (libTi99All + 838-ti994a-memtest)
 # ---------------------------------------------------------
-echo "Cloning libTi99All and 838-ti994a-memtest..."
+echo "Downloading libTi99All and 838-ti994a-memtest..."
 cd ~
-git clone https://github.com/libTi99All/libTi99All.git || true
-git clone https://github.com/shift838/838-ti994a-memtest || true
-echo "Clone complete."
+
+# --- libTi99All ---
+wget https://github.com/libTi99All/libTi99All/archive/refs/heads/main.zip -O libTi99All.zip
+unzip -o libTi99All.zip
+rm -f libTi99All.zip
+mv libTi99All-main libTi99All 2>/dev/null || true
+
+# --- 838-ti994a-memtest ---
+wget https://github.com/shift838/838-ti994a-memtest/archive/refs/heads/main.zip -O memtest.zip
+unzip -o memtest.zip
+rm -f memtest.zip
+mv 838-ti994a-memtest-main 838-ti994a-memtest 2>/dev/null || true
+
+echo "Libraries downloaded and extracted."
 echo
 
 # ---------------------------------------------------------
