@@ -217,7 +217,7 @@ echo "Issue the commands below to compile and copy the required file."
 echo "make clean"
 echo "rm -rf buildti"
 echo "make ti"
-echo "cp /buildti/libti99.a ."
+echo "cp buildti/libti99.a ."
 echo
 echo "You will be ready to compile the 838-ti994a-memteset project."
 echo
