@@ -21,28 +21,32 @@ chmod +x install-gcc-tms9900.sh
 ### 3. Run the installer
 ./install-gcc-tms9900.sh
 
-# What the Installer Sets Up:
-The  script performs a complete toolchain setup:
-• 	Installs required system packages:
-• 	Creates a working directory for all build operations
-• 	Download and extracts:
-    - gcc-4.4.0.tar.gz
-• 	Downloads gcc-4.4.0-tms9900-1.32.patch
-•   Builds gcc 4.4.0
-• 	Installs gcc 4.4.0 1.32 patch
-• 	Builds and installs:
-	- binutils
-    - elf2ea5
-    - ea5split
-    - elf2cart
-• 	Installs binutils 1.11 patch
-•   Clones:
-	  - (Tursilion’s TI‑99 support library)
-      - (SHIFT838’s 838-ti994amemtest repository)
-• 	Adds required environment variables to .bashrc
-    - PATH=~/tms9900gcc/bin:$PATH
-    - LIBTI99 =~/libti99
-• 	Provides instructions for building the 838-ti994a-memtest project
+# What the Installer Sets Up
+
+The script performs a complete toolchain setup:
+
+- Installs required system packages
+- Creates a working directory for all build operations
+- Downloads and extracts:
+  - gcc-4.4.0.tar.gz
+- Downloads gcc-4.4.0-tms9900-1.32.patch
+- Builds GCC 4.4.0
+- Installs the GCC 4.4.0 TMS9900 1.32 patch
+- Builds and installs:
+  - binutils
+  - elf2ea5
+  - ea5split
+  - elf2cart
+- Installs binutils 1.11 patch
+- Clones:
+  - Tursilion’s TI‑99 support library (libTi99All)
+  - SHIFT838’s 838-ti994a-memtest repository
+- Adds required environment variables to `.bashrc`:
+  - `PATH=~/tms9900gcc/bin:$PATH`
+  - `LIBTI99ALL=~/libTi99All`
+- Automatically patches Makefile.ti99 for correct paths
+- Builds libTi99All and copies `libti99.a` into place
+- Provides instructions for building the 838-ti994a-memtest project
 
 The script includes error‑handling logic to stop on failure and only prints a success message when the installation is fully complete.
 
