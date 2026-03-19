@@ -189,39 +189,36 @@ fi
 echo "Environment variables added."
 echo
 
+echo "Patching Makefile.ti99 now..."
+MAKEFILE=~/libTi99All/Makefile.ti99
+# --- Update tool directories ---
+sed -i 's|^TMS9900_DIR?.*|TMS9900_DIR?=$(HOME)/tms9900gcc/bin|' "$MAKEFILE"
+sed -i 's|^ELF2EA5_DIR?.*|ELF2EA5_DIR?=$(HOME)/tms9900gcc/bin|' "$MAKEFILE"
+# --- Update executable paths ---
+sed -i 's|^GAS=.*|GAS=$(TMS9900_DIR)/tms9900-unknown-elf-as|' "$MAKEFILE"
+sed -i 's|^LD=.*|LD=$(TMS9900_DIR)/tms9900-unknown-elf-ld|' "$MAKEFILE"
+sed -i 's|^CC=.*|CC=$(TMS9900_DIR)/tms9900-unknown-elf-gcc|' "$MAKEFILE"
+sed -i 's|^AR=.*|AR=$(TMS9900_DIR)/tms9900-unknown-elf-ar|' "$MAKEFILE"
+
+echo "Makefile.ti99 updated successfully."
+echo
+echo "Building libTi99All..."
+cd ~/libTi99All
+# Clean previous builds
+make clean
+rm -rf buildti
+# Build the TI version of the library
+make ti
+# Copy the resulting library to the libTi99All root
+cp buildti/libti99.a .
+echo "libTi99All built and libti99.a copied successfully."
+
 echo "✔ TMS9900 GCC 4.4.0 toolchain installation completed successfully."
 echo
-
 echo "Verifying TMS9900 GCC installation..."
 $PREFIX/bin/tms9900-unknown-elf-gcc -v
-echo 
-echo "Before bulding the test project, you will need to build the libTi99All library."
-echo "Perform the below..."
 echo
-echo 'cd ~/libTi99All'
-echo 'nano ./Makefile.ti99'
-echo "Update the Paths to:"
-echo
-echo 'TMS9900_DIR?=$(HOME)/tms9900gcc/bin'
-echo 'ELF2EA5_DIR?=$(HOME)/tms9900gcc/bin'
-echo
-echo "Update path to executables:"
-echo
-echo 'GAS=$(TMS9900_DIR)/tms9900-unknown-elf-as'
-echo 'LD=$(TMS9900_DIR)/tms9900-unknown-elf-ld'
-echo 'CC=$(TMS9900_DIR)/tms9900-unknown-elf-gcc'
-echo 'AR=$(TMS9900_DIR)/tms9900-unknown-elf-ar'
-echo "Save your changes!"
-echo
-echo "Issue the commands below to compile and copy the required file."
-echo 'make clean'
-echo 'rm -rf buildti'
-echo 'make ti'
-echo 'cp buildti/libti99.a .'
-echo
-echo "You will be ready to compile the 838-ti994a-memteset project."
-echo
-echo "Reload the envionrment variables.."
+echo "Please reload the envionrment variables using the below command or open a new terminal."
 echo "Issue command: source ~/.bashrc"
 echo
 echo "Happy coding!!!"
