@@ -65,11 +65,14 @@ EA5_SPLIT_DIR?=echo Dont need:
 	- cd ~/838-ti994a-memtest
 	- make
 
-# Repository contents:
-- gcc4-4-install.sh	       		# Automated installer script   
-- gcc-4.4.0-tms9900-1.32.patch	# GCC 1.32 compatibility patch  
-- elf2ea5.tar.gz             		# elf2ea5 utility source  
-- ea5split3.zip              		# ea5split utility source  
-- elf2cart.tar.gz            		# elf2cart utility source  
-- README.md                  		# Documentation  
+# Repository contents
+
+| File | Description |
+|------|-------------|
+| gcc4-4-install.sh | Automated installer script |
+| gcc-4.4.0-tms9900-1.32.patch | GCC 1.32 compatibility patch |
+| elf2ea5.tar.gz | elf2ea5 utility source |
+| ea5split3.zip | ea5split utility source |
+| elf2cart.tar.gz | elf2cart utility source |
+| README.md | Documentation |
 
