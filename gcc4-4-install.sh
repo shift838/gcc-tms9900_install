@@ -156,11 +156,11 @@ echo
 echo "Downloading libTi99All and 838-ti994a-memtest..."
 cd ~
 
-# --- libTi99All (branch: master) ---
-wget https://github.com/libTi99All/libTi99All/archive/refs/heads/master.zip -O libTi99All.zip
+# --- libTi99All (branch: main) ---
+wget https://github.com/libTi99All/libTi99All/archive/refs/heads/main.zip -O libTi99All.zip
 unzip -o libTi99All.zip
 rm -f libTi99All.zip
-mv libTi99All-master libTi99All 2>/dev/null || true
+mv libTi99All-main libTi99All 2>/dev/null || true
 
 # --- 838-ti994a-memtest (branch: main) ---
 wget https://github.com/shift838/838-ti994a-memtest/archive/refs/heads/main.zip -O memtest.zip
