@@ -7,7 +7,9 @@ This script has been tested on realy Ubuntu 20, 24.04 linux machines as well as 
 You may **download and run the installer script directly** without cloning this repository.
 ---
 ## Be Aware
+
 Please be aware that many linux distro's come with 'gcc' already installed and if you execute a 'gcc -v' you will see which version.  This installer installs gcc 4.4.0 which is required by libTi99All library and the names of the binary executables are different.  The new names are:
+
 CC = tms9900-unknown-elf-gcc
 AS = tms9900-unknown-elf=as
 LD = tms9900-unknown-elf-ld
