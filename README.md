@@ -12,10 +12,13 @@ You can install the entire TMS9900 GCC toolchain by downloading the installer sc
 
 ***There will be 100's of warnings, don't panic, just ignore them.
 
-### 1. Download the installer script
+### 1. cd to home directory
+cd ~
+
+### 2. Download the installer script
 wget https://raw.githubusercontent.com/shift838/gcc-tms9900_install/main/install-gcc-tms9900.sh
 
-### 2. Run the installer
+### 3. Run the installer
 bash ./install-gcc-tms9900.sh
 
 # What the Installer Sets Up
