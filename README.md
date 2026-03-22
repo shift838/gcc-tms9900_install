@@ -5,7 +5,8 @@ This repository provides a fully automated installer for building and configurin
 This script has been tested on realy Ubuntu 20, 24.04 linux machines as well as WSL (Windows Subsystem for Linux) with Ubuntu 24.04 installed.  It is recommended to run this under a standard user with 'sudo' privileges and not 'root'.
 
 You may **download and run the installer script directly** without cloning this repository.
-
+---
+## Please be aware that many linux distro's come with 'gcc' already installed and if you execute a 'gcc -v' you will see which version.
 ---
 
 ## 🚀 Quick Install (No Repo Clone Required)
