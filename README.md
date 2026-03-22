@@ -52,7 +52,7 @@ The script performs a complete toolchain setup:
 
 The script includes error‑handling logic to stop on failure and only prints a success message when the installation is fully complete.
 
-# POST Installation
+# *** POST Installation ***
 
 1. To activate the updated enviornment variables with the following command or simply just open a new terminal.
 	- source ~/.bashrc 
