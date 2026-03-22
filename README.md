@@ -1,7 +1,7 @@
 # TMS9900 GCC Toolchain Installer
 
 This repository provides a fully automated installer for building and configuring the GCC-based TMS9900 cross‑compiler toolchain (using GCC 4.4.0) along with several essential TI‑99/4A utilities including Tursi's libTi99All library. It is designed for Linux and WSL (Ubuntu recommended) and sets up everything needed to compile TI‑99/4A software using a modern GCC toolchain. 
----
+
 You may **download and run the installer script directly** without cloning this repository.
 ---
 ## Be Aware
